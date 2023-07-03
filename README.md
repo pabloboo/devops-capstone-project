@@ -126,6 +126,20 @@ You can now perform Tekton development locally, just like in the Cloud IDE lab e
 
 [John Rofrano](https://www.coursera.org/instructor/johnrofrano), Senior Technical Staff Member, DevOps Champion, @ IBM Research, and Instructor @ Coursera
 
+## pabloboo comments on the project
+
+### Activate the Python 3.9 virtual environment
+
+You can activate the Python 3.9 environment with:
+
+```bash
+    sudo apt install python3.10-venv
+    python3 -m venv ~/venv
+    exit
+```
+
+Then you should see (venv) username:~$ when opening a new terminal.
+
 ## License
 
 Licensed under the Apache License. See [LICENSE](LICENSE)
