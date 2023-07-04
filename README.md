@@ -175,6 +175,13 @@ And then:
     nosetests
 ```
 
+### Continuous Integration
+When executing locally flake8 command from .github/workflows/ci-build.yaml if it returns an error try executing:
+
+```bash
+    pip install --upgrade flake8
+```
+
 ## License
 
 Licensed under the Apache License. See [LICENSE](LICENSE)
