@@ -140,6 +140,40 @@ You can activate the Python 3.9 environment with:
 
 Then you should see (venv) username:~$ when opening a new terminal.
 
+Need to install python 3.7.12 so it works with nose 1.3.7 version. First install pyenv on the environment:
+
+```bash
+    sudo apt update
+    sudo apt install curl git make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
+```
+
+```bash
+    git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+```
+
+Edit file .bashrc and add the following lines:
+```bash
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+```
+
+```bash
+    source ~/.bashrc
+    pyenv --version
+```
+
+And then:
+
+```bash
+    pyenv install 3.7.12
+    python --version
+    pyenv local 3.7.12
+    source ~/venv/bin/activate
+    pip install -r requirements.txt 
+    nosetests
+```
+
 ## License
 
 Licensed under the Apache License. See [LICENSE](LICENSE)
