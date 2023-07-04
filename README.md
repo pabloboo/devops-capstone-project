@@ -169,7 +169,6 @@ And then:
     pyenv install 3.7.12
     python --version
     pyenv local 3.7.12
-    source ~/venv/bin/activate
     pip install -r requirements.txt 
     nosetests
 ```
