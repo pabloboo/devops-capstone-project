@@ -182,6 +182,30 @@ When executing locally flake8 command from .github/workflows/ci-build.yaml if it
     pip install --upgrade flake8
 ```
 
+### Docker initialization
+```bash
+    docker run -d --name postgresql5 \
+    -p 5434:5432 \
+    -e POSTGRES_PASSWORD=postgres \
+    -v postgresql:/var/lib/postgresql/data \
+    postgres:alpine
+```
+
+```bash
+    docker run --rm --name accounts \
+    -p 8080:8080 \
+    -e DATABASE_URI=postgresql://postgres:postgres@postgresql5:5432/postgres \
+    --link postgresql5:postgresql5 \
+    accounts
+```
+
+To remove a container try executing:
+```bash
+    docker stop postgresql5
+    docker rm postgresql5
+```
+If it doesn't work create a new container with a new name (postgresql6) and a new port (-p 5435:5432).
+
 ## License
 
 Licensed under the Apache License. See [LICENSE](LICENSE)
