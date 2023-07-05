@@ -30,3 +30,6 @@ httpie==3.2.1
 
 #Flask-Talisman
 Flask-Talisman==0.8.1
+
+# Cors Policy
+Flask-Cors==3.0.10
