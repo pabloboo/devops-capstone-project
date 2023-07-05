@@ -1,5 +1,7 @@
 # DevOps Capstone Template
 
+![Build Status](https://github.com/pabloboo/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.9](https://img.shields.io/badge/Python-3.9-green.svg)](https://shields.io/)
 
@@ -171,6 +173,13 @@ And then:
     pyenv local 3.7.12
     pip install -r requirements.txt 
     nosetests
+```
+
+### Continuous Integration
+When executing locally flake8 command from .github/workflows/ci-build.yaml if it returns an error try executing:
+
+```bash
+    pip install --upgrade flake8
 ```
 
 ## License
